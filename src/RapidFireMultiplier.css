@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Game Container */
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Authentication Section */
+  .auth-container {
+    text-align: center;
+    background-color: #ffeb3b;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .auth-container button {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-container button:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Level Selector */
+  .level-selector {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e3f2fd;
+  }
+  
+  .level-selector h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .level-selector button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .level-selector button:hover {
+    background-color: #388e3c;
+  }
+
+/* Default button style */
+.level-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Countdown & Game Information */
+  .game h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .game h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .stats {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .stats h3 {
+    font-size: 18px;
+  }
+  
+  /* Problem Input */
+  .problem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .problem h3 {
+    font-size: 28px;
+    margin-right: 20px;
+  }
+  
+  .problem input {
+    padding: 10px;
+    font-size: 20px;
+    width: 80px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .problem button {
+    background-color: #ffa726;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .problem button:hover {
+    background-color: #fb8c00;
+  }
+  
+  /* Feedback */
+  .feedback {
+    text-align: center;
+    font-size: 18px;
+    color: #4caf50;
+    margin-top: 10px;
+  }
+  
+  /* Cancel Game Button */
+  .cancel-button {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c2185b;
+  }
+  
+  /* Game Over Screen */
+  .game-over {
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #ff7043;
+    color: white;
+  }
+  
+  .game-over h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .game-over h3 {
+    font-size: 24px;
+  }
+  
+  .game-over button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .game-over button:hover {
+    background-color: #388e3c;
+  }
+  
