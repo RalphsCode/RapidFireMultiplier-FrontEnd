@@ -13,7 +13,7 @@ const RapidFireMultiplier = ({ isAuthenticated, toggleAuth }) => {
 
   // Define the difficulty levels
   const levels = {
-    1: { title: "Starter", time: 8, range1: [1, 9], range2: [1, 12], bonusPoints: 10 },
+    1: { title: "Starter", time: 30, range1: [1, 9], range2: [1, 12], bonusPoints: 10 },
     2: { title: "Intermediate", time: 40, range1: [1, 20], range2: [1, 50], bonusPoints: 20 },
     3: { title: "Advanced", time: 45, range1: [10, 50], range2: [10, 100], bonusPoints: 30 },
   };
