@@ -116,7 +116,7 @@ const RapidFireMultiplier = ({ isAuthenticated, toggleAuth }) => {
 
     if (isCorrect) {
       setCorrectAnswers(prev => prev + 1);
-      setFeedback(<strong style={{ color: 'green' }}>✔️ Correct!</strong>);
+      setFeedback(<strong style={{ color: 'green' }}>&#x2714; Correct!</strong>);
       setScore(prevScore => prevScore + 10);
     } else {
       setFeedback(

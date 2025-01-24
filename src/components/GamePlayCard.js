@@ -33,11 +33,11 @@ const GamePlayCard = ({
           Submit
         </button>
       </div>
-      {feedback && (
+      {/* {feedback &&  */}
         <div className="w-full">
           <p className="feedback">{feedback}</p>
         </div>
-      )}
+      {/* } */}
     </div>
     <button onClick={cancelGame} className="cancel-button">
       End Game
