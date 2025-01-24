@@ -1,5 +1,11 @@
 /* General Navbar Styles */
 .navbar {
+    overflow: hidden;
+    /* Make the navbar fixed */
+    position: fixed; 
+    /* Position it at the top */
+    top: 0; 
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;

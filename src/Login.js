@@ -31,9 +31,6 @@ function Login({ isAuthenticated, toggleAuth }) {
         password: inputPassword,  
       });
 
-      // Useful to see what the frontend is sending to the backend
-      console.log("Username and password going to server via API:", inputUsername, inputPassword);
-
       // Retrieve the response data
       const {
         username,
@@ -74,6 +71,8 @@ function Login({ isAuthenticated, toggleAuth }) {
         setError('Invalid username or password');
       } else if (error.response?.status === 404) {
         setError('User not found');
+      } else if (error.response?.status === 400) {
+        setError(error.response.data?.error || 'An error occurred.'); 
       } else {
         setError('An unexpected error occurred. Please try again.');
       }

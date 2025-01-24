@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Register.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import {validatePassword} from './validatePassword';
 
 /** Function to display the registration form,
  * Process the user entries, and send the information
@@ -18,13 +19,20 @@ function Register({ isAuthenticated, toggleAuth }) {
   const [inputEmail, setInputEmail] = useState('');
   const [error, setError] = useState(null);
 
-  // handle the data when user submits the form
+  // Handle the data when user submits the form
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null);
 
+    // Validate password strength
+    const passwordError = validatePassword(inputPassword);
+    if (passwordError) {
+      setError(passwordError);
+      return;
+    }
+
     try {
-        // Send the user registration information to the API
+      // Send the user registration information to the API
       const response = await axios.post(`${process.env.REACT_APP_API_BASE_URL}auth/register`, {
         username: inputUsername,
         password: inputPassword,
@@ -33,7 +41,7 @@ function Register({ isAuthenticated, toggleAuth }) {
         email: inputEmail,
       });
 
-    //   Deconstruct the response from the database/API
+      // Deconstruct the response from the database/API
       const { username, curr_hi_score, total_points, first_name, last_name, email } = response.data.user;
 
       // Assign new user data to a variable
@@ -62,9 +70,8 @@ function Register({ isAuthenticated, toggleAuth }) {
 
       // Redirect to home page
       navigate('/');
-
     } catch (error) {
-    // Catch errors gracefully
+      // Catch errors gracefully
       console.error('Registration error:', error);
       if (error.response?.status === 400) {
         setError('User already exists');
@@ -109,6 +116,15 @@ function Register({ isAuthenticated, toggleAuth }) {
             required
             autoComplete="new-password"
           />
+          <small className="form-text text-muted">
+            Password must be at least 8 characters long and include:
+            <ul>
+              <li>At least one uppercase letter</li>
+              <li>At least one lowercase letter</li>
+              <li>At least one number</li>
+              <li>At least one special character (e.g., !@#$%)</li>
+            </ul>
+          </small>
         </div>
         <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
