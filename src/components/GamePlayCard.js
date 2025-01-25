@@ -1,4 +1,6 @@
 import React from "react";
+import { levelDisplay } from "./levelDisplay";
+
 
 const GamePlayCard = ({
   level,
@@ -13,7 +15,7 @@ const GamePlayCard = ({
   answerInputRef,
 }) => (
   <div className="game">
-    <h2>Level: {level}</h2>
+    <h2>Level: {levelDisplay(level)}</h2>
     <h2>Time Left: {timeLeft} seconds</h2>
     <h2>Score: {score}</h2>
     <div className="flex flex-col gap-4">
